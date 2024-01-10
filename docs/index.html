@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<title>Spevník JKS</title>
+<link href="moj.css" rel="stylesheet"/>
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<script src="mark.es6.min.js"></script>
+<script src="moj.js"></script>
+<script src="moj_search.js"></script>
+</head>
+<body>
+<script>init()</script>
+<div class="input-container">
+<input autofocus="" id="SearchInput" type="text"/>
+<div class="checker">
+<input type="checkbox" id="myCheck" onclick="myCheckerFunction()">    
+<label for="myCheck">aj v texte</label> 
+
+<span id="myBtn" class='anchor'><img></span>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <!-- <span class="close">&times;</span> -->
+    <p>Pri fulltextovom vyhľadávaní zadajte aspoň štyri znaky.</p>
+    <p>Vyhľadávanie podľa čísla piesne ostáva nezmenené.</p>
+    <button class="close">OK</button>
+  </div>
+</div>
+
+</div>
+<div id="what"></div><br/>
+</div>
+<div id="content"></div>
+</body>
+<script>
+    // apply_FT_Flag();
+</script>
+</html>

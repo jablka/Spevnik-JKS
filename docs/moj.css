@@ -1,0 +1,296 @@
+:root {
+  --zoom: 100%;
+}
+
+html {
+  font-size: var(--zoom);
+}
+
+/******************offline menu **************************************/
+#offlineMenu {
+  margin-bottom: 1em;
+  display: flex;
+  position: sticky;
+  top: 0;
+  gap: .5em;
+  font-size: 100%;
+  /* justify-content: space-between; */
+}
+
+#lcFontSize {
+  opacity: .5;
+  text-align: center;
+  font-size: 100%;
+  width: 5em;
+}
+
+#offlineMenu button {
+  opacity: .5;
+  flex-grow: 1;
+  height: 2rem;
+  vertical-align: middle;
+  font-size: 1rem;
+  font-weight: bold;
+  /* display: block; */
+}
+
+#offlineMenu button:hover {
+  cursor: pointer;
+}
+
+#offlineMenu button:hover,
+#lcFontSize:hover {
+  opacity: .8;
+}
+
+#lcFontSizeSmaller::first-letter {
+  font-size: 80%;
+}
+
+#lcFontSizeBigger::first-letter {
+  font-size: 120%;
+}
+
+/* Tmavý režim *********************/
+body.dark {
+  --farba-pozadie: #222;
+  /* --farba-pozadie: #290c00; */
+  --farba-pismo: white;
+  /* --farba-pismo: rgb(189, 186, 132); */
+  /* --farba-pismo: #bdba84;
+  --farba-pismo: #f5ab35; */
+  
+  background-color: var(--farba-pozadie);
+  color: var(--farba-pismo);
+}
+
+/* zvyšok */
+body {
+  /* color: #ceba29; */
+  /* color: #f9bf3b;
+  background-color: #943400; */
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 50em;
+  margin:auto;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+div.input-container {
+  padding-top:2rem;
+  padding-left: 1.5rem;
+}
+
+input#SearchInput {
+  opacity: .5;
+  /* margin-top: 2rem;
+  margin-left: 1.5rem; */
+  padding: .75rem 1rem;
+  border-radius: 10px;
+  /* border: none; */
+  /* width: 100%; */
+  /* outline: none; */
+  /* padding-left: 3rem; */
+  font-size: 1.125rem;
+  /* color: darken(#ccc, 15%);; */
+}
+
+div.checker {
+margin-top: 1rem;
+}
+
+div#zoznam > div,
+div#zoznam_fulltext > div.song {
+  border: 1px solid black;
+  /* padding: 1rem; optional: add some padding for better appearance */
+  /* margin-bottom: 1px; */
+  /* margin-top: -1px; */
+  margin-bottom: -1px;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  padding: 1rem;
+  color: inherit;
+  margin-left: 1.5rem;
+}
+
+#pies_cont {
+  line-height: 1.5;
+  /* text-align: center; */
+  /* padding-bottom: 5rem; */
+
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#cislo {
+  font-size: 1.1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  /* padding-right: 1rem; */
+}
+
+mark {
+  background: yellow;
+}
+
+html {
+  padding: 0 0.5rem 7rem 0.5rem;
+}
+
+.strofa {
+  /* font-family: 'Times New Roman', Times, serif;   */
+  color: grey;
+  /* font-size: 1.1rem; */
+  /* text-align: left; */
+  font-family: monospace;
+  /* font-size: 90%; */
+  vertical-align: text-top;
+}
+
+p {
+  margin-top:0;
+  /* margin-bottom: 1.5rem; */
+  margin: 0 1rem 2.5rem 1rem;
+  /* text-indent: -1.5rem; */
+  text-align: justify;
+}
+
+.ending {
+  color: grey;
+  text-align: center;
+  padding-top: 1.5rem;
+}
+
+.text > p {
+    margin: 1rem 1rem 1rem 1rem;
+    font-size: 0.8rem;
+    /* text-indent: -1.5rem; */
+    text-align: justify;
+    color: gray;
+}
+
+.nazov a {
+ padding-bottom: 0;
+}
+
+.info {
+  /* text-align: right; */
+  font-family: monospace;
+  font-size: 75%;
+  margin-left: 0.5rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  border: 1px solid grey;
+  border-radius: 50%;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  /* background-color: #fefefe; */
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+}
+
+.modal-content > p {
+  margin: 1rem 1rem 2rem 1rem;
+  line-height: 1.5;
+}
+
+.modal-content > button {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: black;
+  /* opacity: 0.8; */
+  border: 1px solid;
+  margin-top: 1rem;
+}
+
+/* Modal Content */
+.dark .modal-content {
+  /* background-color: #fefefe; */
+  /* background-color: gray; */
+  background-color: #383838;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+}
+
+.dark .modal-content > button {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: black;
+  opacity: 0.8;
+  border: none;
+  margin-top: 1rem;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  /* float: right; */
+  margin: auto;
+  /* font-size: 28px;
+  font-weight: bold; */
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* info ikonka */
+span.anchor img {
+  content: url("info-svgrepo-com.svg");
+  width: 18px;
+  height: 18px;
+}
+
+.checker {
+  text-align: left;
+
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+}
+
+.anchor {
+  float:right;
+  margin-left: auto;
+  margin-right: 2rem;
+}
+
+#zoznam_fulltext .nazov {
+  /* text-decoration: none; */
+  /* display: block; */
+  padding: 1rem;
+  /* color: inherit; */
+  margin-left: 1.5rem;
+  padding-bottom: 0;
+}
